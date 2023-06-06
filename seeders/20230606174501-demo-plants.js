@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Plant')
+    await queryInterface.bulkInsert('Plants',
   // Spring Fruits
   [
   {
@@ -270,11 +270,11 @@ module.exports = {
     createdAt: new Date(),
     updatedAt: new Date()
   }
-]
+]);
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Plant',null,{});
+    await queryInterface.bulkDelete('Plants',null,{});
  
   }
 
