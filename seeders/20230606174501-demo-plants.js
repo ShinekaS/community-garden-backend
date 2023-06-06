@@ -269,7 +269,225 @@ module.exports = {
     harvest: 'Spring to fall',
     createdAt: new Date(),
     updatedAt: new Date()
-  }
+  },
+
+  // Summer Fruits
+  {
+    name: 'Watermelon',
+    zone: '3-11',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Corn, radishes, marigolds',
+    harvest: 'Summer',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Cantaloupe',
+    zone: '4-11',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Corn, radishes, nasturtiums',
+    harvest: 'Summer',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Tomatoes',
+    zone: '3-10',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Basil, marigolds, carrots',
+    harvest: 'Summer to early fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Cucumbers',
+    zone: '4-11',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Corn, beans, radishes',
+    harvest: 'Summer',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Grapes',
+    zone: '5-9',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Basil, roses, marigolds',
+    harvest: 'Late summer to early fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Figs',
+    zone: '8-10',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Lavender, rosemary, marigolds',
+    harvest: 'Late summer to early fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  // Add more fruits for Summer
+
+  // Summer Vegetables
+  {
+    name: 'Tomatoes',
+    zone: '3-10',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Basil, marigolds, carrots',
+    harvest: 'Summer to early fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Peppers',
+    zone: '3-10',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Basil, onions, tomatoes',
+    harvest: 'Summer to early fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Eggplant',
+    zone: '4-11',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Basil, marigolds, tomatoes',
+    harvest: 'Summer to early fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Zucchini',
+    zone: '3-11',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Basil, radishes, nasturtiums',
+    harvest: 'Summer to early fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Squash',
+    zone: '3-11',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Basil, radishes, nasturtiums',
+    harvest: 'Summer to early fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Corn',
+    zone: '4-10',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Cucumbers, beans, squash',
+    harvest: 'Late summer to early fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Okra',
+    zone: '6-11',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Beans, peppers, basil',
+    harvest: 'Summer to early fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Green Beans',
+    zone: '3-10',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Carrots, corn, cucumbers',
+    harvest: 'Summer',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Sweet Potatoes',
+    zone: '8-11',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Beans, onions, nasturtiums',
+    harvest: 'Late summer to fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Melons',
+    zone: '3-11',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Corn, beans, radishes',
+    harvest: 'Summer to early fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  // Add more vegetables for Summer
+
+  // Summer Herbs
+  {
+    name: 'Rosemary',
+    zone: '8-11',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Cabbage, beans, carrots',
+    harvest: 'Year-round',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Thyme',
+    zone: '5-11',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Cabbage, onions, tomatoes',
+    harvest: 'Year-round',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Oregano',
+    zone: '5-10',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Eggplant, peppers, tomatoes',
+    harvest: 'Year-round',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Sage',
+    zone: '5-9',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Cabbage, carrots, rosemary',
+    harvest: 'Year-round',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Lavender',
+    zone: '5-9',
+    season: 'Summer',
+    water: 'Regular watering',
+    companion: 'Cabbage, onions, tomatoes',
+    harvest: 'Summer',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
 ]
   },
 
