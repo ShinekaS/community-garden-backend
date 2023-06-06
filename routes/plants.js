@@ -15,5 +15,24 @@ router.get('/',async (req,res) => {
 })
 
 //View a specific plant by name
+router.get('/:name', async (req,res) => {
+    try{
+        const plant = await Plant.findAll(
+            {
+                where: {
+                    name:(req.params.name)
+                }
+
+            }
+        )
+        if(!plant) {
+            res.status(404).json({message: "Plant not found."})
+        } else{
+            res.json(plant)
+        }
+    } catch (error) {
+        res.status(500).json({message: "Error retrieving plant", error})
+    }
+})
 
 module.exports = router;
