@@ -3,7 +3,7 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Plant')
+    await queryInterface.bulkInsert('Plant',
   // Spring Fruits
   [
   {
@@ -435,8 +435,7 @@ module.exports = {
     createdAt: new Date(),
     updatedAt: new Date()
   },
-  // Add more vegetables for Summer
-
+  
   // Summer Herbs
   {
     name: 'Rosemary',
@@ -478,6 +477,7 @@ module.exports = {
     createdAt: new Date(),
     updatedAt: new Date()
   },
+
   {
     name: 'Lavender',
     zone: '5-9',
@@ -488,7 +488,203 @@ module.exports = {
     createdAt: new Date(),
     updatedAt: new Date()
   },
-]
+    // Fall Fruits
+    {
+    name: 'Apples',
+    zone: '3-9',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Cabbage, onions, marigolds',
+    harvest: 'Fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Pears',
+    zone: '4-9',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Lettuce, spinach, peas',
+    harvest: 'Fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Persimmons',
+    zone: '6-10',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Cabbage, lettuce, spinach',
+    harvest: 'Fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Pomegranates',
+    zone: '7-10',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Basil, mint, marigolds',
+    harvest: 'Fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  // Add more fruits for Fall
+
+  // Fall Vegetables
+  {
+    name: 'Cabbage',
+    zone: '3-9',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Celery, onions, dill',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Brussels sprouts',
+    zone: '3-9',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Beets, carrots, marigolds',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Broccoli',
+    zone: '3-10',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Lettuce, spinach, onions',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Cauliflower',
+    zone: '3-10',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Celery, onions, mint',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Kale',
+    zone: '3-9',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Beets, onions, mint',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Collard greens',
+    zone: '3-10',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Beets, onions, mint',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Turnips',
+    zone: '3-9',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Peas, radishes, dill',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Rutabagas',
+    zone: '3-9',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Carrots, onions, dill',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Pumpkins',
+    zone: '3-9',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Corn, beans, marigolds',
+    harvest: 'Fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Winter squash',
+    zone: '3-9',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Corn, beans, marigolds',
+    harvest: 'Fall',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+
+  // Fall Herbs
+  {
+    name: 'Cilantro',
+    zone: '3-11',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Lettuce, spinach, peas',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Dill',
+    zone: '3-11',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Cabbage, onions, carrots',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Parsley',
+    zone: '3-11',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Tomatoes, asparagus, corn',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Chives',
+    zone: '3-11',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Carrots, strawberries, tomatoes',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  },
+  {
+    name: 'Mint',
+    zone: '3-11',
+    season: 'Fall',
+    water: 'Regular watering',
+    companion: 'Cabbage, onions, parsley',
+    harvest: 'Fall to winter',
+    createdAt: new Date(),
+    updatedAt: new Date()
+  }, 
+  ])
   },
 
   async down (queryInterface, Sequelize) {
