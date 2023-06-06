@@ -3,7 +3,10 @@
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert('Plant',
+
+    await queryInterface.bulkInsert('Plants',
+
+
   // Spring Fruits
   [
   {
@@ -269,6 +272,8 @@ module.exports = {
     harvest: 'Spring to fall',
     createdAt: new Date(),
     updatedAt: new Date()
+
+
   },
 
   // Summer Fruits
@@ -685,10 +690,11 @@ module.exports = {
     updatedAt: new Date()
   }, 
   ])
+
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.bulkDelete('Plant',null,{});
+    await queryInterface.bulkDelete('Plants',null,{});
  
   }
 
