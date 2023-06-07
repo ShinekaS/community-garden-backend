@@ -3,6 +3,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const authRouter = require('./routes/auth')
+var cors = require('cors')
 
 
 const session = require('express-session');
@@ -32,7 +33,7 @@ app.use(
   app.use(passport.initialize());
   app.use(passport.session());
 
-
+app.use(cors())
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth' , authRouter);
