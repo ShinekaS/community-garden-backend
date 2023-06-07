@@ -4,7 +4,7 @@ module.exports =
   "development": {
     "username": process.env.DEVELOPMENT_DATABASE_USER,
     "password": null,
-    "database": process.env.DEVELOPMENT_DATABASE_USER,
+    "database": process.env.DEVELOPMENT_DATABASE_NAME,
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
