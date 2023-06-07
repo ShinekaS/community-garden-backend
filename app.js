@@ -1,9 +1,10 @@
 var express = require('express');
+var cors = require('cors')
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 const authRouter = require('./routes/auth')
-var cors = require('cors')
+
 
 
 const session = require('express-session');
@@ -16,6 +17,8 @@ var plantsRouter = require('./routes/plants');
 var forumRouter = require('./routes/forum')
 
 var app = express();
+
+app.use(cors())
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -33,7 +36,7 @@ app.use(
   app.use(passport.initialize());
   app.use(passport.session());
 
-app.use(cors())
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth' , authRouter);
