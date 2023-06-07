@@ -12,6 +12,7 @@ require('./config/passport')(passport);
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var plantsRouter = require('./routes/plants');
+var forumRouter = require('./routes/forum')
 
 var app = express();
 
@@ -36,5 +37,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/auth' , authRouter);
 app.use('/plants' , plantsRouter);
+app.use('/forum' , forumRouter)
 
 module.exports = app;
