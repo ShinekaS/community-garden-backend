@@ -81,4 +81,81 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
+//Post comments, like and dislike
+
+router.post('/:id/like', async (req, res) => {
+  const articleId = req.params.id;
+
+  try {
+    // Find the article in the database by ID
+    const article = await Forum.findByPk(articleId);
+    if (!article) {
+      return res.status(404).json({ error: 'Article not found' });
+    }
+
+    // Increment the likes count
+    article.likes += 1;
+
+    // Save the updated article
+    await article.save();
+
+    // Send a response back to the client
+    res.status(200).json({ message: 'Article liked successfully' });
+  } catch (error) {
+    console.error('Error liking article:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Handle POST request for disliking an article
+router.post('/:id/dislike', async (req, res) => {
+  const articleId = req.params.id;
+
+  try {
+    // Find the article in the database by ID
+    const article = await Forum.findByPk(articleId);
+    if (!article) {
+      return res.status(404).json({ error: 'Article not found' });
+    }
+
+    // Increment the dislikes count
+    article.dislikes += 1;
+
+    // Save the updated article
+    await article.save();
+
+    // Send a response back to the client
+    res.status(200).json({ message: 'Article disliked successfully' });
+  } catch (error) {
+    console.error('Error disliking article:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
+// Handle POST request for adding a comment to an article
+router.post('/:id/comments', async (req, res) => {
+  const articleId = req.params.id;
+  const { comment } = req.body;
+
+  try {
+    // Find the article in the database by ID
+    const article = await Forum.findByPk(articleId);
+    if (!article) {
+      return res.status(404).json({ error: 'Article not found' });
+    }
+
+    // Add the comment to the article
+    article.comments.push(comment);
+
+    // Save the updated article
+    await article.save();
+
+    // Send a response back to the client
+    res.status(200).json({ message: 'Comment added successfully' });
+  } catch (error) {
+    console.error('Error adding comment:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 module.exports = router;

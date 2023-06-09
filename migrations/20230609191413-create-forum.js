@@ -15,8 +15,14 @@ module.exports = {
       content: {
         type: Sequelize.TEXT
       },
+      likes: {
+        type: Sequelize.INTEGER
+      },
+      dislikes: {
+        type: Sequelize.INTEGER
+      },
       comment: {
-        type: Sequelize.TEXT
+        type: Sequelize.JSON
       },
       createdAt: {
         allowNull: false,
