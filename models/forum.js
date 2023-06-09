@@ -13,15 +13,15 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     }
   }
-
   Forum.init({
     article: DataTypes.STRING,
     content: DataTypes.TEXT,
-    comment: DataTypes.TEXT
+    likes: DataTypes.INTEGER,
+    dislikes: DataTypes.INTEGER,
+    comment: DataTypes.JSON
   }, {
     sequelize,
     modelName: 'Forum',
   });
-
   return Forum;
 };
