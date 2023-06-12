@@ -132,8 +132,7 @@ router.post('/:id/dislike', async (req, res) => {
   }
 });
 
-// Handle POST request for adding a comment to an article
-router.post('/:id/comments', async (req, res) => {
+router.post('/:id/comment', async (req, res) => {
   const articleId = req.params.id;
   const { comment } = req.body;
 
