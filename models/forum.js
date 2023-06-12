@@ -1,27 +1,37 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
-module.exports = (sequelize, DataTypes) => {
-  class Forum extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
+const { Sequelize, DataTypes } = require('sequelize');
+const sequelize = new Sequelize('database', null, null, {
+  host: 'localhost',
+  dialect: 'postgres'
+});
+
+const Forum = sequelize.define('Forum', {
+  id: {
+    type: DataTypes.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
+  article: {
+    type: DataTypes.STRING,
+    allowNull: false
+  },
+  content: {
+    type: DataTypes.TEXT,
+    allowNull: false
+  },
+  likes: {
+    type: DataTypes.INTEGER,
+    defaultValue: 0
+  },
+  dislikes: {
+    type: DataTypes.INTEGER,
+    defaultValue: 0
+  },
+  comments: {
+    type: DataTypes.ARRAY(DataTypes.STRING),
+    defaultValue: []
   }
-  Forum.init({
-    article: DataTypes.STRING,
-    content: DataTypes.TEXT,
-    likes: DataTypes.INTEGER,
-    dislikes: DataTypes.INTEGER,
-    comment: DataTypes.JSON
-  }, {
-    sequelize,
-    modelName: 'Forum',
-  });
-  return Forum;
-};
+}, {
+  tableName: 'Forums'
+});
+
+module.exports = Forum;
