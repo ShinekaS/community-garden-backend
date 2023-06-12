@@ -22,7 +22,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       comment: {
-        type: Sequelize.JSON
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
