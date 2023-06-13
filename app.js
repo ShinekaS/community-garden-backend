@@ -16,6 +16,7 @@ var usersRouter = require('./routes/users');
 var plantsRouter = require('./routes/plants');
 var forumRouter = require('./routes/forum')
 var articlesRouter = require('./routes/articles')
+var gardensRouter = require('./routes/gardens')
 
 var app = express();
 
@@ -44,5 +45,6 @@ app.use('/auth' , authRouter);
 app.use('/plants' , plantsRouter);
 app.use('/forum' , forumRouter)
 app.use('/articles', articlesRouter)
+app.use('/gardens', gardensRouter)
 
 module.exports = app;
