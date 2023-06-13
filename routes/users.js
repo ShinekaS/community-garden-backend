@@ -24,6 +24,31 @@ router.post('/', async (req,res) => {
   }
 })
 
+//Update a user to add garden by id
+router.put("/:id", async (req, res) => {
+  const { garden } = req.body;
+
+  try {
+    const newUser = {};
+    if (garden !== undefined) {
+      newUser.garden = garden;
+    }
+  
+    const [updated] = await User.update(newUser, {
+      where: { id: req.params.id },
+    });
+
+    if (updated) {
+      const updatedUser = await User.findByPk(req.params.id);
+      res.json(updatedUser);
+    } else {
+      res.status(404).json({ message: "User not found" });
+    }
+  } catch (error) {
+    res.status(500).json({ message: "Error updating user's garden", error });
+  }
+});
+
 
 
 module.exports = router;
