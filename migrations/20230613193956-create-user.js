@@ -30,10 +30,13 @@ module.exports = {
       state: {
         type: Sequelize.STRING
       },
-      zipCode: {
+      zipcode: {
         type: Sequelize.STRING
       },
       email: {
+        type: Sequelize.STRING
+      },
+      garden: {
         type: Sequelize.STRING
       },
       createdAt: {
