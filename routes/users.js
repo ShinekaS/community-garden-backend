@@ -15,9 +15,9 @@ router.get('/',async (req,res) => {
 
 //Add a new user
 router.post('/', async (req,res) => {
-  const { firstName, lastName, userName, password, phoneNumber, city, state, zipcode, email } = req.body
+  const { firstName, lastName, userName, password, phoneNumber, city, state, zipcode, email, garden } = req.body
   try{
-    const user = await User.create({ firstName, lastName, userName, password, phoneNumber, city, state, zipcode, email })
+    const user = await User.create({ firstName, lastName, userName, password, phoneNumber, city, state, zipcode, email, garden })
     res.status(201).json(user)
   } catch (error) {
     res.status(500).json({message: "Error creating user"})
