@@ -33,3 +33,4 @@ router.get('/:city', async (req,res) => {
         res.status(500).json({message: "Error retrieving gardens", error})
     }
 })
+module.exports = router;
