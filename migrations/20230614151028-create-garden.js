@@ -28,10 +28,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       announcements: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
+        type: Sequelize.TEXT
       },
       rules: {
-        type: Sequelize.ARRAY(Sequelize.STRING)
+        type: Sequelize.TEXT
       },
       createdAt: {
         allowNull: false,
