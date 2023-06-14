@@ -27,6 +27,12 @@ module.exports = {
       phone: {
         type: Sequelize.STRING
       },
+      announcements: {
+        type: Sequelize.TEXT
+      },
+      rules: {
+        type: Sequelize.TEXT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

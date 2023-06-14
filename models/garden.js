@@ -19,7 +19,9 @@ module.exports = (sequelize, DataTypes) => {
     city: DataTypes.STRING,
     state: DataTypes.STRING,
     availablePlots: DataTypes.INTEGER,
-    phone: DataTypes.STRING
+    phone: DataTypes.STRING,
+    announcements: DataTypes.TEXT,
+    rules: DataTypes.TEXT
   }, {
     sequelize,
     modelName: 'Garden',
